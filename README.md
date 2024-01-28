@@ -20,7 +20,7 @@ This project is a comprehensive exercise in the ALX Africa software engineering 
 
 ## Compilation
 Code is compiled using:
-```c
+
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 
@@ -33,7 +33,7 @@ int main(void) {
     _printf("Custom printf: [%s]\n", "Hello, ALX Africa!");
     return 0;
 }
-
+```
 
 ## Features
 - Basic functionality of `printf`, including format specifiers like `%c`, `%s`, `%d`, `%i`.
