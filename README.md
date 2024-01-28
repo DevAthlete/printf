@@ -30,7 +30,7 @@ Here is an example of how the `_printf` function can be utilized:
 #include "main.h"
 
 int main(void) {
-    _printf("Custom printf: [%s]\n", "Hello, ALX Africa!");
+    _printf("[%s]\n", "Hello, ALX Africa!");
     return 0;
 }
 ```
