@@ -13,5 +13,6 @@ int _str_lenc(const char *string)
 int print_perc(void)
 int _printf(const char *format, ...)
 int print_dig(va_list agrs)
+int print_decs(va_list args)
 
 #endif
