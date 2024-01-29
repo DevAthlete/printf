@@ -11,6 +11,7 @@ int print_strings(va_list velles)
 int _str_len(char *str)
 int _str_lenc(const char *string)
 int print_perc(void)
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
+int print_dig(va_list agrs)
 
 #endif
