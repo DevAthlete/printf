@@ -1,12 +1,12 @@
 #include "main.h"
 /**
  * print_dig - print digits
- * @args: argument print
+ * @agrs: argument print
  * Return: integer
  */
 int print_dig(va_list agrs)
 {
-	int num = va_arg(args, int);
+	int num = va_arg(agrs, int);
 	int numr, ls = num % 10, dig, exp = 1;
 	int  d = 1;
 

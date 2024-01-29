@@ -2,7 +2,7 @@
 
 /**
  * _str_len - finds lenghts of string.
- * @s: string
+ * @str: string
  * Return: integer.
  */
 
@@ -18,7 +18,7 @@ int _str_len(char *str)
 
 /**
  * _str_lenc - finds length of string for constant characters
- * @s: string
+ * @string: string
  * Return: integer
  */
 

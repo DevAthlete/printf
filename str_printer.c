@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * cus_print_str - function that print string.
- * @args: argument list.
+ * print_strings - function that print string.
+ * @velles: argument list.
  * Return: length of the string.
  */
 int print_strings(va_list velles)

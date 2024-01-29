@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_37 - prints the charof percentage.
+ * print_perc - prints the charof percentage.
  * Return: (always 1).
  */
 int print_perc(void)
