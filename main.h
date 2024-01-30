@@ -19,5 +19,7 @@ int _slen(char *str);
 int _slenc(const char *str);
 int psr(va_list ls_args);
 int addn_HEX(unsigned int numbers);
+int p_s_enc(va_list ls_args);
+int addn_hex(unsigned long int numbers);
 
 #endif
