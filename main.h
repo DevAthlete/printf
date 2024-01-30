@@ -14,5 +14,10 @@ int print_perc(void);
 int _printf(const char *format, ...);
 int p_intg(va_list agrs);
 int p_dg(va_list args);
+int p_unsigned(va_list ls_args);
+int _slen(char *str);
+int _slenc(const char *str);
+int psr(va_list ls_args);
+int addn_HEX(unsigned int numbers);
 
 #endif
