@@ -12,7 +12,7 @@ int _strlenth(char *str);
 int _str_lenc(const char *string);
 int print_perc(void);
 int _printf(const char *format, ...);
-int print_dig(va_list agrs);
-int print_decs(va_list args);
+int p_intg(va_list agrs);
+int p_dg(va_list args);
 
 #endif
