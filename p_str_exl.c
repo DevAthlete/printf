@@ -37,4 +37,3 @@ int p_str_exl(va_list vgs)
 	}
 	return (l);
 }
-
