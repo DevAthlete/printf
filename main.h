@@ -28,5 +28,5 @@ int p_octa(va_list var);
 int p__ptr(va_list var);
 int p_hex(va_list var);
 int get_mody(char chr, mod_t *mody);
-
+int p_bin(va_list var);
 #endif
