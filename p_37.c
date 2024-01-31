@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_perc - prints the % char ASCII value is 37.
+ * print_perc - prints the % char ASCII value of 37.
  * Return: 1.
  */
 int print_perc(void)
