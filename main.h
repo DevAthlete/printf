@@ -24,5 +24,8 @@ int addn_hex(unsigned long int numbers);
 int p__ptr(va_list var);
 int p_percesio(void);
 int HEX(va_list velo);
+int p_octa(va_list var);
+int p__ptr(va_list var);
+int p_hex(va_list var);
 int get_mody(char chr, mod_t *mody);
 #endif
