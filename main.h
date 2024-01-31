@@ -21,5 +21,6 @@ int psr(va_list ls_args);
 int addn_HEX(unsigned int numbers);
 int p_s_enc(va_list ls_args);
 int addn_hex(unsigned long int numbers);
+int HEX(va_list velo);
 
 #endif
