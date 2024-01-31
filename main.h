@@ -29,4 +29,5 @@ int p__ptr(va_list var);
 int p_hex(va_list var);
 int get_mody(char chr, mod_t *mody);
 int p_bin(va_list var);
+int flags(char chr, flags_t *flgs)
 #endif
