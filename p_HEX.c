@@ -1,37 +1,37 @@
 #include "main.h"
 
 /**
- * HEX - prints hexadecimal numbers.
- * @velo: argument.
- * Return: cnt.
+ * print_HEX - prints a hexadecimal number.
+ * @v: argument value.
+ * Return: counter.
  */
-int HEX(va_list velo)
+int print_HEX(va_list v)
 {
-	int alo;
-	int *arro;
-	int cnt = 0;
-	unsigned int numbs = va_arg(velo, unsigned int);
-	unsigned int rands = numbs;
+	int a;
+	int *arr;
+	int counter = 0;
+	unsigned int numb = va_arg(v, unsigned int);
+	unsigned int rand = numb;
 
-	while (numbs / 16 != 0)
+	while (numb / 16 != 0)
 	{
-		numbs /= 16;
-		cnt++;
+		numb /= 16;
+		counter++;
 	}
-	cnt++;
-	arro = malloc(cnt * sizeof(int));
+	counter++;
+	arr = malloc(counter * sizeof(int));
 
-	for (alo = 0; alo < cnt; alo++)
+	for (a = 0; a < counter; a++)
 	{
-		arro[alo] = rands % 16;
-		rands /= 16;
+		arr[a] = rand % 16;
+		rand /= 16;
 	}
-	for (alo = cnt - 1; alo >= 0; alo--)
+	for (a = counter - 1; a >= 0; a--)
 	{
-		if (arro[alo] > 9)
-			arro[alo] = arro[alo] + 7;
-		_putchar(arro[alo] + '0');
+		if (arr[a] > 9)
+			arr[a] = arr[a] + 7;
+		_putchar(arr[a] + '0');
 	}
-	free(arro);
-	return (cnt);
+	free(arr);
+	return (counter);
 }

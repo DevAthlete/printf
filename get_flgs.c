@@ -1,30 +1,30 @@
 #include "main.h"
 /**
- * flags - function to check specified flags
- * @chr: flag
- * @flgs: pointer
+ * get_flags - function that checks specified flags
+ * @a: flag to set
+ * @flg: pointer to flag
  *
- * Return: 1 flag is set, 0 if elsewhere
+ * Return: 1 if flag is set, 0 elsewhere
  */
-int flags(char chr, flags_t *flgs)
+int get_flags(char a, flags_t *flg)
 {
-	switch (chr)
+	switch (a)
 
 	{
 		case '+':
-			flgs->plus = 1;
+			flg->plus = 1;
 			return (1);
 		case '-':
-			flgs->minus = 1;
+			flg->minus = 1;
 			return (1);
 		case '0':
-			flgs->zero = 1;
+			flg->zero = 1;
 			return (1);
 		case ' ':
-			flgs->space = 1;
+			flg->space = 1;
 			return (1);
 		case '#':
-			flgs->hash = 1;
+			flg->hash = 1;
 			return (1);
 		default:
 			return (0);

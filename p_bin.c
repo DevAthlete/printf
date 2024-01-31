@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * p_bin - prints binary num.
- * @var: argument value.
+ * print_bin - prints binary num.
+ * @v: argument value.
  * Return: integer
  */
-int p_bin(va_list var)
+int print_bin(va_list v)
 {
 	int flag = 0;
 	int count = 0;
 	int a, b = 1, c;
-	unsigned int num = va_arg(var, unsigned int);
+	unsigned int num = va_arg(v, unsigned int);
 	unsigned int d;
 
 	for (a = 0; a < 32; a++)

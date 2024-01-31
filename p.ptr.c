@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_ptr - prints an hexadecimal number(address).
- * @var: argument variable.
+ * print_ptr - prints an hexadecimal number.
+ * @v: argument value.
  * Return: counter.
  */
-int p__ptr(va_list var)
+int print_ptr(va_list v)
 {
 	void *p;
 	char *s = "(nil)";
@@ -13,7 +13,7 @@ int p__ptr(va_list var)
 	int b;
 	int a;
 
-	p = va_arg(var, void*);
+	p = va_arg(v, void*);
 	if (p == NULL)
 	{
 		for (a = 0; s[a] != '\0'; a++)
@@ -26,6 +26,6 @@ int p__ptr(va_list var)
 	c = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	b = addn_hex(c);
+	b = print_addn_hex(c);
 	return (b + 2);
 }

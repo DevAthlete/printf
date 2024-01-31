@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * p_intg - prints integer to base 10
- * @i_args: vars to print
- * Return: integer(int)
+ * print_int - prints integer to base 10
+ * @list_args: argument to print
+ * Return: integer
  */
-int p_intg(va_list i_args)
+int print_int(va_list list_args)
 {
-	int n = va_arg(i_args, int);
-	int num, last = n % 10, intf, exp = 1;
+	int n = va_arg(list_args, int);
+	int num, last = n % 10, digit, exp = 1;
 	int  a = 1;
 
 	n = n / 10;
@@ -31,9 +31,9 @@ int p_intg(va_list i_args)
 		num = n;
 		while (exp > 0)
 		{
-			intf = num / exp;
-			_putchar(intf + '0');
-			num = num - (intf * exp);
+			digit = num / exp;
+			_putchar(digit + '0');
+			num = num - (digit * exp);
 			exp = exp / 10;
 			a++;
 		}
@@ -44,15 +44,15 @@ int p_intg(va_list i_args)
 }
 
 /**
- * p_dg - prints a decimal int
- * @d_args: var argument
- * Return: integer(digit)
+ * print_dec - prints decimal int
+ * @list_args: argument to print
+ * Return: integer
  */
 
-int p_dg(va_list d_args)
+int print_dec(va_list list_args)
 {
-	int n = va_arg(d_args, int);
-	int num, last = n % 10, dg;
+	int n = va_arg(list_args, int);
+	int num, last = n % 10, digit;
 	int  a = 1;
 	int exp = 1;
 
@@ -77,9 +77,9 @@ int p_dg(va_list d_args)
 		num = n;
 		while (exp > 0)
 		{
-			dg = num / exp;
-			_putchar(dg + '0');
-			num = num - (dg * exp);
+			digit = num / exp;
+			_putchar(digit + '0');
+			num = num - (digit * exp);
 			exp = exp / 10;
 			a++;
 		}

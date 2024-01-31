@@ -1,21 +1,20 @@
 #include "main.h"
 
 /**
- * p_octa - prints octal num.
- * @var: argument variable.
+ * print_addn_HEX - prints a hexadecimal number.
+ * @numb: it sets number to print.
  * Return: counter.
  */
-int p_octa(va_list var)
+int print_addn_HEX(unsigned int numb)
 {
-	int a;
+int a;
 	int *arr;
 	int counter = 0;
-	unsigned int numb = va_arg(var, unsigned int);
 	unsigned int rand = numb;
 
-	while (numb / 8 != 0)
+	while (numb / 16 != 0)
 	{
-		numb /= 8;
+		numb /= 16;
 		counter++;
 	}
 	counter++;
@@ -23,11 +22,13 @@ int p_octa(va_list var)
 
 	for (a = 0; a < counter; a++)
 	{
-		arr[a] = rand % 8;
-		rand /= 8;
+		arr[a] = rand % 16;
+		rand /= 16;
 	}
 	for (a = counter - 1; a >= 0; a--)
 	{
+		if (arr[a] > 9)
+			arr[a] = arr[a] + 7;
 		_putchar(arr[a] + '0');
 	}
 	free(arr);

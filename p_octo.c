@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_hex - prints an hexadecimal number.
+ * print_oct - prints octal num.
  * @v: argument value.
  * Return: counter.
  */
-int print_hex(va_list v)
+int print_oct(va_list v)
 {
 	int a;
 	int *arr;
@@ -13,9 +13,9 @@ int print_hex(va_list v)
 	unsigned int numb = va_arg(v, unsigned int);
 	unsigned int rand = numb;
 
-	while (numb / 16 != 0)
+	while (numb / 8 != 0)
 	{
-		numb /= 16;
+		numb /= 8;
 		counter++;
 	}
 	counter++;
@@ -23,13 +23,11 @@ int print_hex(va_list v)
 
 	for (a = 0; a < counter; a++)
 	{
-		arr[a] = rand % 16;
-		rand /= 16;
+		arr[a] = rand % 8;
+		rand /= 8;
 	}
 	for (a = counter - 1; a >= 0; a--)
 	{
-		if (arr[a] > 9)
-			arr[a] = arr[a] + 39;
 		_putchar(arr[a] + '0');
 	}
 	free(arr);

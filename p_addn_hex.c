@@ -1,36 +1,36 @@
 #include "main.h"
 
 /**
- * addn_hex - prints hexadecimal numbers.
- * @numbers: argument.
- * Return: cnt.
+ * print_addn_hex - prints an hexadecimal number.
+ * @numb: argument value.
+ * Return: counter.
  */
-int addn_hex(unsigned long int numbers)
+int print_addn_hex(unsigned long int numb)
 {
-	long int ab;
-	long int *arro;
-	long int cnt = 0;
-	unsigned long int rands = numbers;
+	long int a;
+	long int *arr;
+	long int counter = 0;
+	unsigned long int rand = numb;
 
-	while (numbers / 16 != 0)
+	while (numb / 16 != 0)
 	{
-		numbers /= 16;
-		cnt++;
+		numb /= 16;
+		counter++;
 	}
-	cnt++;
-	arro = malloc(cnt * sizeof(long int));
+	counter++;
+	arr = malloc(counter * sizeof(long int));
 
-	for (ab = 0; ab < cnt; ab++)
+	for (a = 0; a < counter; a++)
 	{
-		arro[ab] = rands % 16;
-		rands = rands / 16;
+		arr[a] = rand % 16;
+		rand = rand / 16;
 	}
-	for (ab = cnt - 1; ab >= 0; ab--)
+	for (a = counter - 1; a >= 0; a--)
 	{
-		if (arro[ab] > 9)
-			arro[ab] = arro[ab] + 39;
-		_putchar(arro[ab] + '0');
+		if (arr[a] > 9)
+			arr[a] = arr[a] + 39;
+		_putchar(arr[a] + '0');
 	}
-	free(arro);
-	return (cnt);
+	free(arr);
+	return (counter);
 }

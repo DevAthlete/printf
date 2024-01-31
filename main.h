@@ -51,9 +51,9 @@ typedef struct modifiers
 } mod_t;
 
 /**
- * struct format - converter printf
- * @ph: type char pointer of specifier
- * @func: function for conversion specifier
+ * struct format - converter for printf
+ * @ph: type char pointer of the specifier
+ * @func: function for the conversion specifier
  *
  */
 
@@ -63,30 +63,29 @@ typedef struct format
 	int (*func)();
 } convert;
 
-int _putchar(char c);
-int p_cha(va_list argz);
-int p_string(va_list velles);
-int _strlenth(char *str);
-int _str_lenc(const char *string);
+int *_strcpy(char *dest, char *src);
+int print_ptr(va_list v);
+int print_unsigned(va_list list_args);
+int print_addn_hex(unsigned long int numb);
+int _strlenc(const char *s);
+int print_addn_HEX(unsigned int numb);
+int print_str_excl(va_list v);
+int print_HEX(va_list v);
+int print_hex(va_list v);
+int print_oct(va_list v);
+int print_bin(va_list v);
+int print_str_rev(va_list list_args);
+int print_str_encode(va_list list_args);
+int print_int(va_list list_args);
+int print_dec(va_list list_args);
+int _strlen(char *s);
+int rev_string(char *s);
 int print_perc(void);
+int print_chr(va_list v);
+int print_str(va_list v);
+int _putchar(char c);
+int get_flags(char a, flags_t *flg);
+int get_modifier(char c, mod_t *mod);
 int _printf(const char *format, ...);
-int p_intg(va_list agrs);
-int p_dg(va_list args);
-int p_unsigned(va_list ls_args);
-int _slen(char *str);
-int _slenc(const char *str);
-int psr(va_list ls_args);
-int addn_HEX(unsigned int numbers);
-int p_s_enc(va_list ls_args);
-int addn_hex(unsigned long int numbers);
-int p__ptr(va_list var);
-int p_percesio(void);
-int HEX(va_list velo);
-int p_octa(va_list var);
-int p__ptr(va_list var);
-int p_hex(va_list var);
-int get_mody(char chr, mod_t *mody);
-int p_bin(va_list var);
-int flags(char chr, flags_t *flgs)
 
 #endif
